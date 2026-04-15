@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* --- RESET BÁSICO --- */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* --- ESTILOS GENERALES --- */
+body {
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    background-image: url(../assests/backgrounds/milano40.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 25px;
+    text-align: center;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+}
+
+footer {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding: 30px 20px 20px;
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 15px;
+}
+
+.logo-link {
+    height: 100px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0px 5px rgba(0,0,0,0.1));
+}
+
+.logo-link img:hover {
+    transform: scale(1.15);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #987d0e;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: block;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #643294;
+    transform: scale(1.10);
+}
+
+/* --- HOME --- */
+.heros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 60px 20px;
+}
+
+.characters {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.characters img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.35));
+}
+
+.text-box {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.hero-title {
+    margin: 0 0 15px;
+    text-align: right;
+    font-size: 38px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.character-description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: right;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #b8921c;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #6f42c1;
+    transform: translateY(-2px);
+}
+
+/* --- PÁGINA DE PERSONAJES --- */
+.characters-page {
+    padding: 30px 40px 60px;
+}
+
+.characters-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.characters-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+}
+
+.character-card {
+    width: 210px;
+    background: linear-gradient(180deg, #202437 0%, #1a1d2b 100%);
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-8px);
+}
+
+.character-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 4px solid #ff3131;
+}
+
+.card-info {
+    min-height: 120px;
+    padding: 14px 14px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-info h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.2;
+}
+
+.card-info p {
+    margin: 28px 0 0;
+    color: #d8d8d8;
+    text-align: center;
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.4;
+}
+
+/* --- PÁGINA DE PELÍCULAS --- */
+.movies-page {
+    padding: 30px 40px 60px;
+}
+
+.movies-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.movie-card {
+    width: 240px;
+    background: linear-gradient(180deg, #202437 0%, #1a1d2b 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+}
+
+.movie-card summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.movie-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 4px solid #ff3131;
+}
+
+.movie-info {
+    padding: 14px;
+}
+
+.movie-info h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: "Montserrat", sans-serif;
+}
+
+.movie-info p {
+    margin: 8px 0 0;
+    color: #d8d8d8;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.movie-description {
+    padding: 0 14px 18px;
+}
+
+.movie-description p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+}
+
+.movie-card[open] {
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+/* --- SPOTIFY SECTION --- */
+.spotify-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 70px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+
+.section-text {
+    text-align: center;
+    color: #d8d8d8;
+    margin: 0 0 25px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.spotify-section iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 352px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* --- TABLET --- */
+@media (max-width: 1024px) {
+    .heros {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .characters {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .characters img {
+        max-width: 650px;
+    }
+
+    .text-box {
+        width: 90%;
+    }
+
+    .hero-content {
+        padding: 24px;
+    }
+
+    .hero-title {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .character-description {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .text-box {
+        justify-content: center;
+    }
+
+    .characters-grid {
+        gap: 18px;
+    }
+
+    .character-card {
+        width: 180px;
+    }
+
+    .character-card img {
+        height: 210px;
+    }
+
+    .movies-grid {
+        gap: 20px;
+    }
+
+    .movie-card {
+        width: 220px;
+    }
+
+    .movie-card img {
+        height: 310px;
+    }
+}
+
+/* --- MOBILE --- */
+@media (max-width: 600px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo-link {
+        height: 70px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav a {
+        text-align: center;
+        width: 180px;
+    }
+
+    .heros {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .text-box,
+    .characters {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .characters img {
+        max-width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .hero-title {
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .character-description {
+        text-align: center;
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .characters-page {
+        padding: 20px;
+    }
+
+    .characters-title {
+        font-size: 28px;
+    }
+
+    .character-card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .character-card img {
+        height: 260px;
+    }
+
+    .movies-page {
+        padding: 20px;
+    }
+
+    .movies-title {
+        font-size: 28px;
+    }
+
+    .movie-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .movie-card img {
+        height: 380px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-text {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .spotify-section iframe {
+        height: 352px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+/* --- SCROLLBAR --- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f0f14;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff3131, #643294);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff5a5a, #7a3bb5);
+}

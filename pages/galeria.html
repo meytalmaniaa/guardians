@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Galaxy Fan Page</title>
+    <link rel="shortcut icon" href="../assests/small-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+       <a href="../index.html" class="logo-link">
+        <img class="logo-img" src="../assests/small-icon.png" alt="Guardians logo">
+       </a>
+        <nav>
+           <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./personajes.html">Characters</a></li>
+            <li><a href="./peliculas.html">Movies</a></li>
+            <li><a href="./galeria.html">Gallery</a></li>
+            <li><a href="./contacto.html">Contact</a></li>
+           </ul> 
+        </nav>
+    </header>
+
+    <main class="gallery-page">
+    <section class="gallery-hero">
+        <h1>Guardians Gallery</h1>
+        <p>
+            Explore the most iconic characters and moments from the Guardians of the Galaxy universe.
+        </p>
+    </section>
+
+    <section class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="../assests/gallery/gamora.jpg" alt="Gamora">
+            </div>
+            <div class="carousel-slide active">
+                <img src="../assests/gallery/starlord.jpg" alt="Star-Lord">
+            </div>
+            <div class="carousel-slide active">
+                <img src="../assests/gallery/rocket2.jpg" alt="Rocket">
+            </div>
+            <div class="carousel-slide active">
+                <img src="../assests/gallery/groot.jpg" alt="Groot">
+            </div>
+            <div class="carousel-slide active">
+                <img src="../assests/gallery/drax.jpg" alt="Drax">
+            </div>
+            <div class="carousel-slide active">
+                <img src="../assests/gallery/pjtrpG.gif" alt="Action">
+            </div>
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+    </section>
+
+    <div class="carousel-dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+</main>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".carousel-slide");
+    const dots = document.querySelectorAll(".dot");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    function showSlide(index) {
+        if (index >= slides.length) slideIndex = 0;
+        if (index < 0) slideIndex = slides.length - 1;
+
+        slides.forEach((slide) => slide.classList.remove("active"));
+        dots.forEach((dot) => dot.classList.remove("active"));
+
+        slides[slideIndex].classList.add("active");
+        dots[slideIndex].classList.add("active");
+    }
+
+    function currentSlide(index) {
+        slideIndex = index;
+        showSlide(slideIndex);
+    }
+
+    nextBtn.addEventListener("click", () => {
+        slideIndex++;
+        showSlide(slideIndex);
+    });
+
+    prevBtn.addEventListener("click", () => {
+        slideIndex--;
+        showSlide(slideIndex);
+    });
+
+    showSlide(slideIndex);
+</script>
+
+    <footer class="footer">
+        <p>Guardians of the Galaxy Fan Page © 2026</p>
+    </footer>
+</body>
+</html>
