@@ -3,29 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guardians of the Galaxy Fan Page</title>
-    <link rel="shortcut icon" href="../assests/small-icon.png" type="image/x-icon">
-    <!--CSS Code-->
-    <link rel="stylesheet" href="../styles/style.css">
+    <title>Contact | Guardians</title>
+    <link rel="shortcut icon" href="../assests/small-icon.png">
+    <link rel="stylesheet" href="../styles/style.css?v=5">
 </head>
+
 <body>
-    <header>
-       <a href="../index.html" class="logo-link">
-        <img class="logo-link"src="../assests/small-icon.png" alt="logo">
-       </a>
-        <nav>
-           <ul>
+
+<header>
+    <a href="../index.html" class="logo-link">
+        <img class="logo-img" src="../assests/small-icon.png" alt="logo">
+    </a>
+
+    <nav>
+        <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="./personajes.html">Characters</a></li>
             <li><a href="./peliculas.html">Movies</a></li>
-            <li><a href="./galeria.html">Galery</a></li>
+            <li><a href="./galeria.html">Gallery</a></li>
             <li><a href="./contacto.html">Contact</a></li>
-           </ul> 
-        </nav>
-    </header>
-    <main>
-    </main>
-    <footer>
-    </footer>
+        </ul>
+    </nav>
+</header>
+
+<main class="contact-page">
+
+    <h1>Contact Us</h1>
+
+    <div class="contact-container">
+
+        <!-- FORMULARIO -->
+        <!-- ⚠️ CAMBIA EL action POR TU LINK DE FORMSPREE -->
+        <form class="contact-form" method="POST">
+
+            <p class="testtext">
+                🚀 Don’t worry, this message won’t be intercepted by Thanos... probably.
+            </p>
+
+            <input type="hidden" name="_subject" value="New message from Guardians site">
+
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Star-Lord, is that you?" required>
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="your@email.com (no Ravager spam please)" required>
+
+            <label>Message</label>
+            <textarea name="message" rows="5" placeholder="Tell us something heroic... or just say hi" required></textarea>
+
+            <button type="submit">Send to the Galaxy 🚀</button>
+
+        </form>
+
+        <!-- MAPA -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19079.784958948407!2d-117.9313266218246!3d33.81054158530388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd76fe8dfa0d5%3A0xb44b2bbd07b43658!2sGuardians%20of%20the%20Galaxy%20-%20Mission%3A%20BREAKOUT*21!5e0!3m2!1sen!2smx!4v1776217049550!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>Guardians of the Galaxy Fan Page © 2026</p>
+</footer>
+
 </body>
 </html>
